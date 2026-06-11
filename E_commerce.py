@@ -100,12 +100,16 @@ def make_purchase():
         print("Product not found!")
         return
 
-    quantity = int(input("Enter quantity: "))
-    
-    # check if enough stock is available
-    if quantity > products[item]["stock"]:
-        print(f"Not enough stock! Available: {products[item]['stock']}")
-        return
+    # get quantity with validation
+    while True:
+        quantity = int(input("Enter quantity: "))
+        
+        # check if enough stock is available
+        if quantity > products[item]["stock"]:
+            print(f"Not enough stock! Available: {products[item]['stock']}")
+            print("Please enter a valid quantity.\n")
+        else:
+            break
     
     subtotal = products[item]["price"] * quantity
 
