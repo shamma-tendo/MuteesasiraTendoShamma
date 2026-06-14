@@ -1,7 +1,7 @@
 # Assignment 3: Real-World Application of Loop Control Statements
 # Program: FIFA World Cup 2026 - National Team Manager Simulation
 # Demonstrates: while loop, break, continue, pass
-#MUTEESASIRA TENDO SHAMMA 2400707480 
+# MUTEESASIRA TENDO SHAMMA 2400707480 
 
 
 import random
