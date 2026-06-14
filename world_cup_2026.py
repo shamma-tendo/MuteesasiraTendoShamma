@@ -7,7 +7,7 @@
 import random
 import time
 
-# TEAM DATA: Real countries competing at FIFA World Cup 2026
+# TEAM DATA: Using real countries competing at FIFA World Cup 2026
 # The tournament expands to 48 teams across USA, Canada & Mexico
 
 WORLD_CUP_TEAMS = [
