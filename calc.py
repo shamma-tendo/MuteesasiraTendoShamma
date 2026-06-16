@@ -99,36 +99,36 @@ window = tk.Tk()
 window.title("Calculator")
 window.geometry("320x480")
 window.resizable(False, False)
-window.configure(bg="white")
+window.configure(bg="#000080")
 
 display_var = tk.StringVar(value="0")
 display = tk.Label(window, textvariable=display_var, font=("Arial", 48),
                     bg="#8B4DB8", fg="white", anchor="e", padx=20)
 display.pack(fill="both", pady=(60, 20))
 
-button_frame = tk.Frame(window, bg="white")
+button_frame = tk.Frame(window, bg="#000080")
 button_frame.pack(expand=True, fill="both")
 
 # (label, row, column, columnspan, bg color, text color, action)
 buttons = [
-    ("C", 0, 0, 1, "#D8BFD8", "white", click_clear),
-    ("+/-", 0, 1, 1, "#D8BFD8", "white", click_toggle_sign),
-    ("DEL", 0, 2, 1, "#D8BFD8", "white", click_backspace),
+    ("C", 0, 0, 1, "#4B0082", "white", click_clear),
+    ("+/-", 0, 1, 1, "#4B0082", "white", click_toggle_sign),
+    ("DEL", 0, 2, 1, "#4B0082", "white", click_backspace),
     ("/", 0, 3, 1, "#8B4DB8", "white", lambda: click_operator("/")),
-    ("7", 1, 0, 1, "white", "#8B4DB8", lambda: click_digit("7")),
-    ("8", 1, 1, 1, "white", "#8B4DB8", lambda: click_digit("8")),
-    ("9", 1, 2, 1, "white", "#8B4DB8", lambda: click_digit("9")),
+    ("7", 1, 0, 1, "#000080", "white", lambda: click_digit("7")),
+    ("8", 1, 1, 1, "#000080", "white", lambda: click_digit("8")),
+    ("9", 1, 2, 1, "#000080", "white", lambda: click_digit("9")),
     ("x", 1, 3, 1, "#8B4DB8", "white", lambda: click_operator("x")),
-    ("4", 2, 0, 1, "white", "#8B4DB8", lambda: click_digit("4")),
-    ("5", 2, 1, 1, "white", "#8B4DB8", lambda: click_digit("5")),
-    ("6", 2, 2, 1, "white", "#8B4DB8", lambda: click_digit("6")),
+    ("4", 2, 0, 1, "#000080", "white", lambda: click_digit("4")),
+    ("5", 2, 1, 1, "#000080", "white", lambda: click_digit("5")),
+    ("6", 2, 2, 1, "#000080", "white", lambda: click_digit("6")),
     ("-", 2, 3, 1, "#8B4DB8", "white", lambda: click_operator("-")),
-    ("1", 3, 0, 1, "white", "#8B4DB8", lambda: click_digit("1")),
-    ("2", 3, 1, 1, "white", "#8B4DB8", lambda: click_digit("2")),
-    ("3", 3, 2, 1, "white", "#8B4DB8", lambda: click_digit("3")),
+    ("1", 3, 0, 1, "#000080", "white", lambda: click_digit("1")),
+    ("2", 3, 1, 1, "#000080", "white", lambda: click_digit("2")),
+    ("3", 3, 2, 1, "#000080", "white", lambda: click_digit("3")),
     ("+", 3, 3, 1, "#8B4DB8", "white", lambda: click_operator("+")),
-    ("0", 4, 0, 2, "white", "#8B4DB8", lambda: click_digit("0")),
-    (".", 4, 2, 1, "white", "#8B4DB8", click_decimal),
+    ("0", 4, 0, 2, "#000080", "white", lambda: click_digit("0")),
+    (".", 4, 2, 1, "#000080", "white", click_decimal),
     ("=", 4, 3, 1, "#8B4DB8", "white", click_equals),
 ]
 
