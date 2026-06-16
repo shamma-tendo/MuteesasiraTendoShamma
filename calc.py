@@ -2,9 +2,6 @@
 # addition, subtration, multiplication and division
 #MUTEESASIRA TENDO SHAMMA 2400707480
 
-
-
-
 import tkinter as tk
 
 #  Arithmetic Functions 

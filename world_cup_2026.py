@@ -48,7 +48,7 @@ def print_divider(char="=", length=60):
     print(char * length)
 
 def print_stats(morale, strength, injuries):
-    print(f"\n  📊 Team Stats  |  Morale: {morale}/10  |  "
+    print(f"\n  Team Stats  |  Morale: {morale}/10  |  "
           f"Strength: {strength}/10  |  Injuries: {injuries}")
 
 def get_choice(prompt, valid_options):
@@ -57,7 +57,7 @@ def get_choice(prompt, valid_options):
         choice = input(prompt).strip().lower()
         if choice in valid_options:
             return choice
-        print(f"  ⚠  Invalid input. Choose from: {valid_options}")
+        print(f"  Invalid input. Choose from: {valid_options}")
 
 def display_teams_by_confederation():
     """Display all World Cup 2026 teams organized by confederation in table format."""
@@ -269,11 +269,11 @@ def pre_tournament_preparation():
             print("\n  Scouts dispatched! No immediate effect this session.")
             print("  Skipping to next session...")
             session += 1
-            continue                                    # -- CONTINUE --
+            continue                                    # CONTINUE 
 
-        # -- PASS: placeholder for a future "press conference" feature --
+        # PASS: placeholder for a future "press conference" feature 
         if choice == "p":
-            pass                                        # -- PASS (placeholder) --
+            pass                                        #  PASS (placeholder) 
 
         if choice == "t":
             strength = min(strength + 2, 10)
@@ -334,7 +334,7 @@ def group_stage(player_country, group_opponents, morale, strength, injuries):
     match_num = 0
     eliminated = False
 
-    while match_num < len(group_opponents):       # -- WHILE LOOP --
+    while match_num < len(group_opponents):       #  WHILE LOOP 
         opponent = group_opponents[match_num]
         print_divider("-")
         print(f"  Group Match {match_num + 1}: {player_country} vs {opponent}")
@@ -387,14 +387,13 @@ def group_stage(player_country, group_opponents, morale, strength, injuries):
             print("\n  With 0 points after 2 matches, qualification is impossible.")
             print(f"  {player_country} is ELIMINATED from the group stage.")
             eliminated = True
-            break                                       # -- BREAK --
+            break                                       #  BREAK 
 
         # -- CONTINUE: skip morale boost if team is already at peak morale --
         if morale == 10:
             print("  Morale is already at peak -- skipping morale boost.")
             match_num += 1
-            continue                                    # -- CONTINUE --
-
+            continue                                    # CONTINUE 
         match_num += 1
 
     if not eliminated:
@@ -424,16 +423,16 @@ def knockout_stage(player_country, knockout_opponents, morale, strength, injurie
     round_index = 0
     champion    = False
 
-    while round_index < len(KNOCKOUT_ROUNDS):           # -- WHILE LOOP --
+    while round_index < len(KNOCKOUT_ROUNDS):           # WHILE LOOP 
         round_name = KNOCKOUT_ROUNDS[round_index]
         opponent   = knockout_opponents[round_index]
 
         print(f"\n  {round_name.upper()}: {player_country} vs {opponent}")
         print_stats(morale, strength, injuries)
 
-        # -- PASS: placeholder for fan support / stadium atmosphere feature --
+        #  PASS: placeholder for fan support / stadium atmosphere feature 
         # Future: fan chants affect morale dynamically based on host city
-        pass                                            # -- PASS (placeholder) --
+        pass                                            #  PASS (placeholder) 
 
         print("\n  Manage your squad before kick-off:")
         print("  [p] Push key players  -> +2 Strength, but risk injury")
@@ -469,7 +468,7 @@ def knockout_stage(player_country, knockout_opponents, morale, strength, injurie
             print(f"  Host City: {host}")
             if round_name == "Final":
                 champion = True
-                break                                   # -- BREAK: won the cup! --
+                break                                   #  BREAK: won the cup! 
 
         elif result == "draw":
             # Knockout stage: draws go to penalties
@@ -482,21 +481,21 @@ def knockout_stage(player_country, knockout_opponents, morale, strength, injurie
             else:
                 morale = max(morale - 2, 1)
                 print(f"  {player_country} LOSES on penalties. Tournament over.")
-                break                                   # -- BREAK: eliminated --
+                break                                   # BREAK: eliminated 
 
         else:
             morale = max(morale - 2, 1)
             print(f"\n  {player_country} LOSES to {opponent}. Knocked out in {round_name}.")
             print(f"  Host City: {host}")
-            break                                       # -- BREAK: eliminated --
+            break                                       #  BREAK: eliminated 
 
-        # -- CONTINUE: if morale is critical, skip press conference (future feature)
-        #    and go straight to preparing for the next match --
+        #  CONTINUE: if morale is critical, skip press conference (future feature)
+        #    and go straight to preparing for the next match 
         if morale <= 2:
             print("\n  Morale critically low -- skipping press conference.")
             print("  Moving straight to next round preparation...")
             round_index += 1
-            continue                                    # -- CONTINUE --
+            continue                                    #  CONTINUE 
 
         round_index += 1
 
