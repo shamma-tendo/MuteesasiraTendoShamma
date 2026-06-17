@@ -46,6 +46,7 @@ def click_decimal():
 
 def click_operator(op):
     global first_num, operator, reset_screen
+    
     # if an operator is already pending, solve it first (allows chaining: 5+3x2)
     if first_num is not None and operator is not None and not reset_screen:
         click_equals()
