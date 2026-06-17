@@ -1,4 +1,3 @@
 countries = ['Uganda', 'Kenya', 'Rwanda', 'Burundi', 'Zimbabwe', 'Sudan']
-
-copy = countries.copy()
-print(copy)
+for countries in countries:
+    print(countries)
