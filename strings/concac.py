@@ -7,3 +7,4 @@ print(result)
 # Alternative using str() conversion
 result2 = name + " is " + str(age) + " years old"
 print(result2)
+
