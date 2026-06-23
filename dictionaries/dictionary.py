@@ -18,3 +18,8 @@ print(shoes)
 #return a list of all values in the dictionary
 list(shoes.values())
 print(shoes)
+#check if size exists
+print("size" in shoes)
+#loop through the dictionary
+for key, value in shoes.items():
+    print(key, value)
