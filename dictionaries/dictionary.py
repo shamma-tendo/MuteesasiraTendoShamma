@@ -23,3 +23,8 @@ print("size" in shoes)
 #loop through the dictionary
 for key, value in shoes.items():
     print(key, value)
+
+#remove "color"
+del shoes["color"]
+#empty dictionary
+shoes.clear()
