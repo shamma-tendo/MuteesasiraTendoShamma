@@ -1,0 +1,16 @@
+2026-06-28 08:00:01,001 [INFO] ═══ Student Record Management System Started ═══
+2026-06-28 08:00:15,210 [INFO] ACTION: Added student REG0001 – Alice Nakato
+2026-06-28 08:01:03,445 [INFO] ACTION: Added student REG0002 – Brian Otieno
+2026-06-28 08:01:52,670 [INFO] ACTION: Added student REG0003 – Carol Namukasa
+2026-06-28 08:02:30,112 [INFO] ACTION: Added student REG0004 – David Ssemakula
+2026-06-28 08:03:10,890 [INFO] ACTION: Added student REG0005 – Esther Akello
+2026-06-28 08:04:00,001 [INFO] ACTION: Viewed all students – 5 record(s) displayed.
+2026-06-28 08:05:22,334 [INFO] ACTION: Searched for student REG0003 – found.
+2026-06-28 08:06:05,778 [WARNING] Search failed: No student with registration number REG9999 was found.
+2026-06-28 08:07:14,002 [WARNING] Add student failed: A student with registration number REG0001 already exists.
+2026-06-28 08:08:30,561 [WARNING] Search input invalid: 'ABC123' is not a valid registration number. Use format REG#### (e.g. REG0001).
+2026-06-28 08:09:47,230 [INFO] ACTION: Updated student REG0002.
+2026-06-28 08:10:55,119 [WARNING] Invalid menu choice entered: '9'
+2026-06-28 08:11:40,003 [INFO] ACTION: Deletion of REG0004 cancelled by user.
+2026-06-28 08:12:22,884 [INFO] ACTION: Deleted student REG0005 – Esther Akello.
+2026-06-28 08:13:00,100 [INFO] ═══ System exited by user. ═══

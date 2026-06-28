@@ -1,0 +1,37 @@
+{
+    "REG0001": {
+        "program": "BSc Computer Science",
+        "address": "Plot 14 Kampala Road, Kampala",
+        "phone": "+256 701 123 456",
+        "email": "alice.nakato@student.ac.ug",
+        "enrolled_date": "2022-08-15"
+    },
+    "REG0002": {
+        "program": "BA Economics",
+        "address": "Nansana Town, Wakiso District",
+        "phone": "+256 772 234 567",
+        "email": "brian.otieno@student.ac.ug",
+        "enrolled_date": "2024-08-10"
+    },
+    "REG0003": {
+        "program": "BSc Nursing",
+        "address": "Entebbe Road, Entebbe",
+        "phone": "+256 753 345 678",
+        "email": "carol.namukasa@student.ac.ug",
+        "enrolled_date": "2021-08-18"
+    },
+    "REG0004": {
+        "program": "BEng Civil Engineering",
+        "address": "Jinja Road, Mukono",
+        "phone": "+256 706 456 789",
+        "email": "david.ssemakula@student.ac.ug",
+        "enrolled_date": "2023-08-20"
+    },
+    "REG0005": {
+        "program": "MSc Data Science",
+        "address": "Mbarara City, Western Uganda",
+        "phone": "+256 781 567 890",
+        "email": "esther.akello@student.ac.ug",
+        "enrolled_date": "2020-08-12"
+    }
+}
