@@ -1,0 +1,58 @@
+# ============================================
+# Question 2: Smart City Transport System
+# ============================================
+
+class Vehicle:
+    def __init__(self, reg_no, manufacturer, speed):
+        self.reg_no = reg_no
+        self.manufacturer = manufacturer
+        self.speed = speed
+    
+    def start(self):
+        return f"{self.reg_no} starting..."
+    
+    def stop(self):
+        return f"{self.reg_no} stopping..."
+
+class Bus(Vehicle):
+    def __init__(self, reg_no, manufacturer, speed, route_no, capacity):
+        super().__init__(reg_no, manufacturer, speed)
+        self.route_no = route_no
+        self.capacity = capacity
+    
+    def start(self):
+        return f"Bus {self.route_no}: " + super().start()
+
+class ElectricVehicle(Vehicle):
+    def __init__(self, reg_no, manufacturer, speed, battery_percent):
+        super().__init__(reg_no, manufacturer, speed)
+        self.battery_percent = battery_percent
+        self.charging = False
+    
+    def charge(self):
+        self.charging = True
+        self.battery_percent = 100
+        return "Charging complete!"
+    
+    def start(self):
+        if self.battery_percent < 5:
+            return "Battery low! Charge first."
+        return super().start()
+
+class ElectricBus(Bus, ElectricVehicle):
+    """Multiple inheritance: combines Bus and ElectricVehicle"""
+    def __init__(self, reg_no, manufacturer, speed, route_no, capacity, battery_percent):
+        Bus.__init__(self, reg_no, manufacturer, speed, route_no, capacity)
+        ElectricVehicle.__init__(self, reg_no, manufacturer, speed, battery_percent)
+    
+    def start(self):
+        # MRO: ElectricBus -> Bus -> ElectricVehicle -> Vehicle
+        return ElectricVehicle.start(self)  # Use EV's start method
+
+# Demonstration
+ebus = ElectricBus("E123", "Tesla", 60, "R42", 50, 80)
+print(ebus.start())
+print(ebus.charge())
+print(ElectricBus.__mro__)
+
+
