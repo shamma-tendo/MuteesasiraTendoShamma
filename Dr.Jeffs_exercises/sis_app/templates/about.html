@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}About - Student Information System{% endblock %}
+
+{% block content %}
+    <section class="about-page">
+        <h2>About the Student Information System</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    The Student Information System (SIS) is a web-based application built using the Flask framework.
+                    It provides a platform for managing student registration and information retrieval.
+                </p>
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Home Page:</strong> Landing page with navigation links.</li>
+                    <li><strong>About Page:</strong> Information about the application.</li>
+                    <li><strong>Registration Form:</strong> Collects student details using POST method.</li>
+                    <li><strong>Dynamic Routes:</strong> URL parameters for personalized pages.</li>
+                    <li><strong>Database Storage:</strong> SQLite for persistent data storage.</li>
+                </ul>
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li><strong>Backend:</strong> Python with Flask framework</li>
+                    <li><strong>Frontend:</strong> HTML5, CSS3</li>
+                    <li><strong>Templating:</strong> Jinja2</li>
+                    <li><strong>Database:</strong> SQLite with SQLAlchemy ORM</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock %}

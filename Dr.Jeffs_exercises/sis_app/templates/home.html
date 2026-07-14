@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Student Information System{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to the Student Information System</h2>
+            <p>Manage student records efficiently and effectively.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">{{ total_students }}</span>
+                    <span class="stat-label">Registered Students</span>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="{{ url_for('register') }}" class="btn btn-primary">Register Now</a>
+                <a href="{{ url_for('students_list') }}" class="btn btn-secondary">View All Students</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Easy Registration</h3>
+            <p>Simple and intuitive registration process for new students.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Student Management</h3>
+            <p>Track and manage student information with ease.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Quick Search</h3>
+            <p>Find student records instantly using dynamic routes.</p>
+        </div>
+    </section>
+{% endblock %}

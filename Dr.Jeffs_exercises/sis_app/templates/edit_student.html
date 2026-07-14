@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Student - Student Information System{% endblock %}
+
+{% block content %}
+    <section class="edit-page">
+        <h2>Edit Student</h2>
+        <div class="form-container">
+            <form method="POST" action="{{ url_for('edit_student', student_id=student.id) }}" class="registration-form">
+                <div class="form-group">
+                    <label for="student_name">Student Name *</label>
+                    <input type="text" id="student_name" name="student_name" value="{{ student.student_name }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="registration_number">Registration Number *</label>
+                    <input type="text" id="registration_number" name="registration_number" value="{{ student.registration_number }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" value="{{ student.email }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="programme">Programme of Study *</label>
+                    <select id="programme" name="programme" required>
+                        <option value="">Select your programme</option>
+                        <option value="Computer Science" {% if student.programme == 'Computer Science' %}selected{% endif %}>Computer Science</option>
+                        <option value="Information Technology" {% if student.programme == 'Information Technology' %}selected{% endif %}>Information Technology</option>
+                        <option value="Software Engineering" {% if student.programme == 'Software Engineering' %}selected{% endif %}>Software Engineering</option>
+                        <option value="Data Science" {% if student.programme == 'Data Science' %}selected{% endif %}>Data Science</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a href="{{ url_for('students_list') }}" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}

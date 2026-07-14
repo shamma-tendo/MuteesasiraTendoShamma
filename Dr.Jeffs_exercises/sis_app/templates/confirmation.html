@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Confirmation - Student Information System{% endblock %}
+
+{% block content %}
+    <section class="confirmation-page">
+        <h2>✅ Registration Confirmation</h2>
+        <div class="confirmation-card">
+            <div class="confirmation-header">
+                <h3>Student Registered Successfully!</h3>
+                <p>Student information has been saved to the database.</p>
+            </div>
+
+            <div class="student-details">
+                <div class="detail-item">
+                    <span class="detail-label">Student Name:</span>
+                    <span class="detail-value">{{ student.student_name }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Registration Number:</span>
+                    <span class="detail-value">{{ student.registration_number }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Email Address:</span>
+                    <span class="detail-value">{{ student.email }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Programme:</span>
+                    <span class="detail-value">{{ student.programme }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Registration Date:</span>
+                    <span class="detail-value">{{ student.registration_date.strftime('%Y-%m-%d %H:%M') }}</span>
+                </div>
+            </div>
+
+            <div class="confirmation-actions">
+                <a href="{{ url_for('home') }}" class="btn btn-secondary">Return Home</a>
+                <a href="{{ url_for('register') }}" class="btn btn-primary">Register Another</a>
+                <a href="{{ url_for('students_list') }}" class="btn btn-secondary">View All Students</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
