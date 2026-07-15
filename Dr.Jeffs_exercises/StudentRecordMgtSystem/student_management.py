@@ -22,10 +22,10 @@ CSV_FILE  = "students.csv"
 JSON_FILE = "students.json"
 LOG_FILE  = "student_system.log"
 
-# ─────────────────────────────────────────────
+
 #  Logging configuration
 #  Logs go to both the log file AND the console
-# ─────────────────────────────────────────────
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -37,9 +37,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# ═══════════════════════════════════════════════════════════
+
 #  Custom Exceptions
-# ═══════════════════════════════════════════════════════════
+
 
 class StudentNotFoundError(Exception):
     """Raised when a registration number does not exist in the records."""
@@ -56,9 +56,9 @@ class InvalidInputError(Exception):
     pass
 
 
-# ═══════════════════════════════════════════════════════════
+
 #  Helper / Utility Functions
-# ═══════════════════════════════════════════════════════════
+
 
 def clear_screen():
     """Clear terminal screen for a cleaner UI experience."""
@@ -125,10 +125,9 @@ def validate_phone(phone: str) -> str:
     return phone
 
 
-# ═══════════════════════════════════════════════════════════
 #  CSV Functions  –  Core student fields
 #  Fields stored: reg_number, name, year_of_study, gpa
-# ═══════════════════════════════════════════════════════════
+
 
 CSV_HEADERS = ["reg_number", "name", "year_of_study", "gpa"]
 
@@ -172,10 +171,10 @@ def _find_csv_record(reg_number: str) -> dict | None:
     return None
 
 
-# ═══════════════════════════════════════════════════════════
+
 #  JSON Functions  –  Extended student details
 #  Fields stored: address, phone, email, program, enrolled_date
-# ═══════════════════════════════════════════════════════════
+
 
 def _read_json() -> dict:
     """
@@ -202,9 +201,9 @@ def _write_json(data: dict) -> None:
         raise
 
 
-# ═══════════════════════════════════════════════════════════
+
 #  Core CRUD Operations
-# ═══════════════════════════════════════════════════════════
+
 
 def add_student() -> None:
     """
